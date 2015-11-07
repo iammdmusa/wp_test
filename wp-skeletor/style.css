@@ -1,0 +1,173 @@
+/*
+Theme Name:SKEL-ETOR
+Author:The Nest team
+Author URI:http://www.wearethenest.com.au/
+Description:SKEL-ETOR
+Version: 1.0
+*/
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+
+audio:not([controls]) { display: none; height: 0; }
+
+[hidden] { display: none; }
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+html, button, input, select, textarea { font-family: sans-serif; }
+
+body { margin: 0; }
+
+a:focus { outline: thin dotted; }
+
+a:active, a:hover { outline: 0; }
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+
+mark { background: #ff0; color: #000; }
+
+p, pre { margin: 1em 0; }
+
+code, kbd, pre, samp { font-family: monospace,serif; _font-family: 'courier new',monospace; font-size: 1em; }
+
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+
+q:before, q:after { content: ''; content: none; }
+
+small { font-size: 80%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+dl, menu, ol, ul { margin: 1em 0; }
+
+dd { margin: 0 0 0 40px; }
+
+menu, ol, ul { padding: 0 0 0 40px; }
+
+nav ul, nav ol { list-style: none; list-style-image: none; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; }
+
+svg:not(:root) { overflow: hidden; }
+
+figure { margin: 0; }
+
+form { margin: 0; }
+
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+legend { border: 0; padding: 0; white-space: normal; *margin-left: -7px; }
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+button, input { line-height: normal; }
+
+button, select { text-transform: none; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; *overflow: visible; }
+
+button[disabled], html input[disabled] { cursor: default; }
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *height: 13px; *width: 13px; }
+
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+textarea { overflow: auto; overflow: vertical; vertical-align: top; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+.chromeframe { margin: 0.2em 0; background: #ccc; color: #000; padding: 0.2em 0; }
+
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+
+.ir br { display: none; }
+
+.hidden { display: none !important; visibility: hidden; }
+
+.vh { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.vh.focusable:active, .vh.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+.invisible { visibility: hidden; }
+
+.entry-content img { margin: 0 0 1.5em 0; }
+
+.alignleft, img.alignleft { margin-right: 1.5em; display: inline; float: left; }
+
+.alignright, img.alignright { margin-left: 1.5em; display: inline; float: right; }
+
+.aligncenter, img.aligncenter { margin-right: auto; margin-left: auto; display: block; clear: both; }
+
+.wp-caption { margin-bottom: 1.5em; text-align: center; padding-top: 5px; }
+
+.wp-caption img { border: 0 none; padding: 0; margin: 0; }
+
+.wp-caption p.wp-caption-text { line-height: 1.5; font-size: 10px; margin: 0; }
+
+.wp-smiley { margin: 0 !important; max-height: 1em; }
+
+blockquote.left { margin-right: 20px; text-align: right; margin-left: 0; width: 33%; float: left; }
+
+blockquote.right { margin-left: 20px; text-align: left; margin-right: 0; width: 33%; float: right; }
+
+.size-auto, .size-full, .size-large, .size-medium, .size-thumbnail { max-width: 100%; height: auto; }
+
+body { font: 62.5%/1.4em Arial, Helvetica, sans-serif; background: #fff; }
+
+body { background: #fff; }
+
+h1 { font-size: 2.5em; margin: 0.67em 0; }
+
+h2 { font-size: 2em; margin: 0.83em 0; }
+
+h3 { font-size: 1.75em; margin: 1em 0; }
+
+h4 { font-size: 1.5em; margin: 1.33em 0; }
+
+h5 { font-size: 1.25em; margin: 1.67em 0; }
+
+h6 { font-size: 1em; margin: 2.33em 0; }
+
+.inner { padding: 30px; }
+
+.inner-h { padding: 0 30px; }
+
+.inner-v { padding: 30px 0; }
+
+.container { margin: 0 auto; width: 960px; }
+
+#logo h1 a { display: block; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('images/logo.png?1386543210'); background-repeat: no-repeat; background-position: 0 0 50%; width: 169px; height: 55px; }
+
+@media print { * { background: transparent !important; color: #000 !important; box-shadow: none !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; }
+  /* Black prints faster:h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; } }

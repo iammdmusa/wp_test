@@ -1,0 +1,113 @@
+// =============================================================================
+// MIXINS
+// =============================================================================
+
+// Clearfix
+@mixin group {zoom:1;
+	&:before, &:after {content:'';display:table;position:relative;}
+	&:after {clear:both}
+}
+
+// Background Opacity
+@mixin transparent-background($color, $alpha) {
+	$rgba: rgba($color, $alpha);
+	$ie-hex-str: ie-hex-str($rgba);
+	background-color: transparent;
+	background-color: $rgba;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+	zoom: 1;
+}
+
+// Thumbnail Gallery
+@mixin thumbnail-gallery($items: 4) {clear:both; list-style:none; padding:0; margin:0 -1%; width:auto; @include group;
+	li {width:(100% - (2 * $items)) / $items; display:inline-block; margin:0 1% 2%; float:left;
+		a {text-align:center; display:block; margin:0 auto;}
+		img {display:block; width:100%; height:auto;}
+	}
+}
+
+// Automated textshadow based on color being used
+@mixin inverse-textshadow( $a, $opacity: 0.8 ) {
+	@if lightness( $a ) >= 65% {
+		@include text_shadow( 0, -1px, 0, rgba(0, 0, 0, $opacity) );
+	} @else {
+		@include text_shadow( 0, 1px, 0, rgba(255, 255, 255, $opacity) );
+	}
+}
+
+// Full browser width bars
+// Note - Add to CSS: html, body {overflow-x:hidden;}
+@mixing full-browser-width-bars($background:#000) {background:$background; position:relative;
+	&:before, &:after {background:$background; content:""; position:absolute; top:0; bottom:0; width:9999px;}
+	&:before {right:100%;}
+	&:after {left:100%;}
+}
+
+// Media Queries - Simplified
+@mixin breakpoint($point) {
+	@if $point == mobile {
+		@media only screen and (max-width: 640px) { @content; }
+	}
+	@else if $point == mobile-portrait {
+		@media only screen and (max-width : 320px) { @content; }
+	}
+}
+
+// Media Queries - Full
+// @mixin breakpoint($point) {
+// 	// Mobile/Smartphone
+// 	@if $point == smartphone {
+// 		@media only screen and (min-device-width : 320px) and (max-device-width : 480px) { @content; }
+// 	}
+// 	// Mobile/Smartphone
+// 	@else if $point == smartphone-landscape {
+// 		@media only screen and (min-width : 321px) { @content; }
+// 	}
+// 	// Mobile/Smartphone
+// 	@else if $point == smartphone-portrait {
+// 		@media only screen and (max-width : 320px) { @content; }
+// 	}
+// 	// Retina
+// 	@else if $point == iphone {
+// 		@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) { @content; }
+// 	}
+// 	// Retina
+// 	@else if $point == iphone-landscape {
+// 		@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) { @content; }
+// 	}
+// 	// iPad/Non-Retina
+// 	@else if $point == tablet {
+// 		@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { @content; }
+// 	}
+// 	// iPad/Non-Retina
+// 	@else if $point == tablet-landscape {
+// 		@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { @content; }
+// 	}
+// 	// iPad/Non-Retina
+// 	@else if $point == tablet-portrait {
+// 		@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { @content; }
+// 	}
+// 	// iPad/Retina
+// 	@else if $point == ipad {
+// 		@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) { @content; }
+// 	}
+// 	// iPad/Retina
+// 	@else if $point == ipad-portrait {
+// 		@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) { @content; }
+// 	}
+// 	@else if $point == desktop {
+// 		@media only screen and (min-width : 1224px) { @content; }
+// 	}
+// 	@else if $point == desktop-fullscreen {
+// 		@media only screen and (min-width : 1824px) { @content; }
+// 	}
+// }
+
+// =============================================================================
+// THEME SPECIFIC MIXINS
+// =============================================================================
+
+// Example...
+// @mixin skel-etor-button($color: $primary) {background:$color; color:$text-color-inverse; display:inline-block; padding:0.25em; text-transform:uppercase;
+// 	&:hover {background:darken($primary, 10%);}
+// }
